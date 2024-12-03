@@ -25,7 +25,7 @@ pero sirven para almacenar variables de css (Custom properties)
 html{
     font-size: 62.5%;
     box-sizing: border-box;/*Tamanio de Caja*/
-    scroll-snap-type: y mandatory; /*Efecto de Scroll*/
+
 }
 
 .servicios,
@@ -235,7 +235,7 @@ h1,h2,h3{
 .hero{
     /*background-image-->Define una imagen con su propiedad url*/
     /*Nota:(../), se utiliza para salir de una carpeta*/
-    background-image: url(../img/hero.jpg);
+    background-image: url(../img/heroAIT.jpg);
     /*Evitar que la imagen se repita*/
     background-repeat: no-repeat;
     /*Cover-->Propiedad que asigna todo el ancho 
@@ -339,6 +339,52 @@ h1,h2,h3{
     align-items: center;
 }
 
+/*Modulos*/
+@media (min-width: 768px) {
+    .modulos{
+        /*Agregar las propiedades de display grid*/
+        display: grid;
+        /*Dividir por columnas*/
+        /*Las siguientes definiciones son equivalentes*/
+        /*grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: 1fr 1fr 1fr;*/
+        grid-template-columns: repeat(3, 1fr);
+        /*Separacion entre cada columna*/
+        column-gap: 1rem;
+    }    
+}
+
+.modulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modulo h3{
+    color: var(--secundario);
+    font-weight: normal;
+    text-align: center;
+}
+
+.modulo p{
+    /*Interlineado*/
+    line-height: 2;
+}
+
+.modulo .iconos{
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--blanco);
+    /*Para Hacer los circulos aplicamos el selector 
+    Border-Radius al 50%. 
+    Nota: Al Elemeto que se le aplicara, debe
+    ser un cuadrado exsaxto*/
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .formulario{
     background-color: var(--gris);
     /*Asignar el valor mas pequeño disponible
@@ -416,6 +462,34 @@ h1,h2,h3{
     border-radius: 0.5rem;
 }
 
-.footer{
+/* Footer */
+.footer {
     text-align: center;
+    padding: 2rem 0;
+    background-color: var(--grisClaro);
+}
+
+.imagenes-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.imagenes-footer img {
+    width: 15rem;
+    height: 10rem;
+    object-fit: cover; /* Asegura que las imágenes mantengan proporción y rellenen el contenedor */
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .imagenes-footer {
+        flex-direction: column;
+    }
+
+    .imagenes-footer img {
+        margin-bottom: 1rem;
+    }
 }

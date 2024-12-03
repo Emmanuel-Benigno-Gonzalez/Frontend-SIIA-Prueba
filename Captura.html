@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Datos que requiere/entiende el navegador-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Nombre de identificacion en la Web-->
+    <title>AIT</title>
+    
+    <!--Hoja de Normalizacion para que el sitio se adapta a cada navegador-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--Hoja de estilos de fuente proveniente de un sitio web externo-->
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+   
+    <!--Ayuda a mejorar el rendimiento y performance del Sitio Web-->
+    <link rel="preload" href="css/styles.css" as="style">
+    
+    <!--Referencia y relacion al archivo Styles css-->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+    <!--Encabezado-->
+    <header>
+        <!--Etiqueta que separa un componente de otro
+        De esta forma podemos trabajarlos de forma conjunta o por separado
+        -->
+        <h1 class="titulo">SIIA<span></span></h1>
+    </header>
+    
+    <!--Barra de Navegacion-->
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="/Captura.html">Modulos</a>
+            <a href="#">Integración</a>
+            <a href="#">Aeropuertos</a>
+        </nav>
+    </div>
+
+    <!--Reglas para utilizar el Section
+    1-. Si el primer elemento hijo de la etiqueta "section" es un header, es decir una etieuta "h2,h3,h3....."
+    2-. Excepcion de la Regla 1, en caso de que sea el contenido principal, se ocupa la etiqueta "main"
+    -->
+    <section class="hero">
+        <div class="contenido-hero">
+            <h2>Centro de Control de Operaciones <span></span></h2>
+            <!--ICONS SVG "Escala Vector Grafico: Tipo de icons que no se deforman al manipularlos"
+                Pagina de Desacarga: Iconos de Tabler
+            -->
+            <div class="ubicacion">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="11" r="3" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+    
+                <p>Toluca, Estado de Mexico</p>
+            </div>
+
+            <a class="boton" href="#">Contactar</a>
+        </div>
+    </section>
+    
+    <!--Contenido Principal (Define el contenido principal del sitio Web)-->
+    <main class="contenedor sombra">
+    
+        <section>
+
+            <h2>Contacto</h2>
+
+            <form class="formulario">
+                <!--fieldset: Permite Agrupar un Grupo de Campos-->
+                <fieldset>
+                    <legend>Captura de Operaciones Diarias</legend>
+                    
+                    <div class="contenedor-campos">
+                        <!--Div: Argupa componentes generales
+                        -Es una etiqueta generica de agrupamiento
+                        -Es indispensable cuando no aplica el section, main, header, footer
+                        -->
+                        <div class="campo">
+                            <label for="">Nombre</label>
+                            <input class="input-text" type="text" placeholder="Tu Nombre">
+                        </div>
+                                        
+                        <div class="campo">
+                            <label for="">Teléfono</label>
+                            <input class="input-text" type="tel" placeholder="Tu Teléfono">
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="">Correo</label>
+                            <input class="input-text" type="email" placeholder="Tu Email">
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="">Mensaje</label>
+                            <textarea class="input-text"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="alinear-derecha flex">
+                        <input class="boton w-sm-100" type="submit" value="Enviar">
+                    </div>
+                    
+                </fieldset>
+            </form>
+
+        </section>
+    </main>
+    
+    <!--Pie de Pagina-->
+    <footer class="footer">
+        <p>Todos los Derechos Reservados. Emmanuel Benigno Freelancer</p>
+    </footer>
+
+</body>
+</html>
