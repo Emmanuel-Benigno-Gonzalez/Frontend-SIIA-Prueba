@@ -6,13 +6,12 @@
     De esta forma el sitio web se adaptara de mejor manera a los diferentes navegadores
     Se utilizar en lugar de utilizar "pixeles o en"
 */
-
 /*Pseudoselectores
 Son etiquetas que no se encuentran en el archico html, 
 pero sirven para almacenar variables de css (Custom properties)
 */
 :root{
-    --blanco:#ffffff;
+    --blanco:#FFFFFF;
     --oscuro:#212121;
     --primario:#ffc107;
     --secundario:#0097A7;
